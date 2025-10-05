@@ -1,0 +1,259 @@
+%% À compiler avec lualatex
+\documentclass{mitacs-acceleration}
+
+\begin{document}
+\mitacsheader
+
+\title{Proposition de recherche Accélération}
+\author{Marty McFly}
+\date{}
+\maketitle
+\hypersetup{
+  pdftitle = {Proposition de recherche Accélération},
+  pdfauthor = {Marty McFly}
+}
+
+\vskip 1in
+\section{Résumé des stagiaires et unités de stage} %% {{{
+
+\subsection{Plan de travail proposé par unités de stage (US)}
+
+\begin{instructions}
+Veuillez indiquer le nom de chaque stagiaire (inscrire \og{}à déterminer\fg{} si inconnu), le niveau académique et le nombre d'unités de stage (US) associées à chaque stagiaire. Ce tableau fournit une vue d'ensemble du projet de recherche proposé et des informations sur le, la ou les stagiaires. Notez que chaque US correspond à un stage de 4 ou 6 mois. Veuillez consulter le Guide Accélération : Rédiger votre demande pour plus d'informations.
+\end{instructions}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|y{2in}|y{1.5in}|y{0.75in}|y{0.75in}|}
+\hline
+\rowcolor[gray]{.75}%
+\small\textbf{Nom du, de la ou des stagiaires} & \small\textbf{Niveau académique} & \small\textbf{Nombre d'unités de stage} & \small\textbf{Durée du stage (indiquez le nombre total de mois)} \\
+\hline
+Nom
+& % College
+  % Undergrad
+  % Masters
+  % PhD
+  % PDF
+  % Recent Graduate (College)
+  % Recent Graduate (Undergraduate)
+  % Recent Graduate (Masters)
+  % Recent Graduate (PhD)
+  % Other
+& % Nombre d'unités de stage
+& % Nombre de mois
+\\
+\hline
+\end{tabular}
+\renewcommand{\arraystretch}{1}
+
+%% --- Section }}}
+
+\newpage
+
+\fancyhead[L]{\includegraphics[height=0.35in]{Mitacs_logo_blue}}
+
+\phantom{W}
+
+\section{Description de la recherche proposée}
+
+%% Pour une raison étrange, les sous-sections de la section 2 ne sont pas numérotées de la même manière...
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+
+\subsection{Sommaire du projet}
+
+\begin{instructions}
+Veuillez fournir:
+\begin{enumerate}[label=\alph*)]
+    \item un aperçu du problème de recherche;
+    \item une description détaillée des principales activités de l'organisation partenaire et du ou des défis que le partenaire vise à résoudre à travers ce projet; 
+    \item une description des avantages sociaux ou économiques attendus du projet pour la ou les organisations partenaires.
+\end{enumerate}
+Notez que cette section servira à recruter des évaluatrices et évaluateurs. (Maximum de 300 mots)
+\end{instructions}
+
+\subsection{Contexte du projet}
+
+\subsubsection{Problème ou question de recherche}
+
+\begin{instructions}
+Énoncez clairement le problème ou la question de recherche que votre projet tente d'étudier et/ou de résoudre. (Maximum de 50 mots)
+\end{instructions}
+
+
+\subsubsection{Renseignements généraux et revue de travaux antérieurs pertinents}
+
+\begin{instructions}
+Fournissez une revue de la littérature suffisante pour contextualiser l'importance du problème ou de la question de recherche, en incorporant des citations pertinentes. Des références bibliographiques spécialisées doivent être citées dans le texte en utilisant le style propre à votre domaine et énumérées à la section \og{}Références\fg{} ci-dessous. Les évaluatrices ou évaluateurs doivent comprendre l'état de l'art et les lacunes en matière de connaissances dans le domaine de recherche qui sera abordé par les objectifs du projet de recherche. (Minimum de 500 mots)
+\end{instructions}
+
+
+\subsection{Objectifs généraux du projet}
+
+\begin{instructions}
+Précisez l'objectif général du projet.
+\end{instructions}
+
+\subsection{Sous-objectifs et calendrier du projet}
+
+\begin{instructions}
+Veuillez remplir le tableau approprié ci-dessous selon la durée de votre projet (un an ou moins, ou plus d'un an) et supprimer l'autre.
+\end{instructions}
+
+\tolandscape
+\subsection*{Calendrier du projet pour les projets pluriannuels (plus d'un an)}
+
+\begin{instructions}
+\begin{enumerate}
+\item  Fournissez une liste des sous-objectifs, répartis par mois, que vous avez prévus pour atteindre pour atteindre le·s objectif·s global·aux du projet.
+\item  Indiquez quand chaque tâche sera effectuée et par quelle personne stagiaire. Indiquez le nom de chaque stagiaire ou le niveau académique et le numéro si les stagiaires n'ont pas encore été identifié·es. Par exemple, si vous avez deux étudiant·es au doctorat, inscrivez \og{}PhD 1\fg{} et \og{}PhD 2\fg{}. 
+\item  Marquez d'un ‘x' le ou les mois prévus ou surlignez les cases appropriées. 
+\item  Veillez à ce qu'il n'y ait pas de lacunes dans le calendrier et à ce que les efforts requis pour accomplir chaque tâche conviennent au temps alloué à chaque stagiaire.
+\item  Veillez à ce que des tâches soient assignées à chaque stagiaire.
+\item  Vous pouvez ajouter ou supprimer des lignes/colonnes du tableau si nécessaire, en fonction du nombre de sous-objectifs, de tâches spécifiques et de la durée de votre projet.
+\end{enumerate}
+*Prenez note que la ou les mêmes personnes stagiaires peuvent être impliquées dans plus d'un sous-objectif et que plusieurs personnes stagiaires peuvent être impliquées dans le ou les mêmes sous-objectifs.
+\end{instructions}
+
+%% Pour modifier le diagramme de Gantt, éditer le fichier gantt.lua
+\scalebox{0.8}{\directlua{require("gantt")}}
+
+\toportrait
+
+\subsection{Méthodologie ou approche} %% {{{
+
+\begin{instructions}
+Décrivez la ou les méthodes qui seront utilisées pour atteindre les objectifs du projet, y compris des détails techniques comme l'équipement, les procédures et/ou les participantes et participants à l'étude. 
+
+Fournissez suffisamment de détails pour que les évaluatrices et évaluateurs puissent déterminer si la méthodologie proposée est appropriée et suffisante pour atteindre les objectifs/sous-objectifs.
+\end{instructions}
+
+%% }}}
+
+\subsection{Livrables (résultats)} %% {{{
+
+\begin{instructions}
+Quels résultats de la liste ci-dessous le projet devrait-il produire?
+
+Veuillez sélectionner toutes les réponses qui s'appliquent. Vous devez sélectionner au moins une réponse.
+\end{instructions}
+
+\begin{itemize}[label=$\boxempty$]
+\item Rapports pour l'organisation partenaire
+\item Présentations pour le personnel de l'organisation partenaire  
+\item Demandes de brevet  
+\item Présentations lors d'une conférence 
+\item Nouveaux outils ou nouvelles méthodes de recherche 
+\item Autres demandes concernant la propriété intellectuelle (droit d'auteur, marque de commerce, conception industrielle) 
+\item Plans de commercialisation d'une nouvelle technologie     
+\item Nouveaux produits ou services   
+\item Occasions permettant à l'organisation partenaire d'embaucher de nouvelles personnes  
+\item Expansion dans de nouveaux marchés 
+\item Publication dans des revues à comité de lecture, des chapitres de livres ou des publications techniques  
+\item Chapitre(s) de thèse 
+\item Si autre, veuillez préciser:
+\end{itemize}
+
+%% }}}
+
+\subsection{Interaction avec l'organisation partenaire} %% {{{
+
+\begin{instructions}
+Veuillez sélectionner une seule option ci-dessous pour indiquer la nature de l'interaction avec l'organisation partenaire.
+\end{instructions}
+
+Sur place  $\boxempty$~~~~~~~Virtuelle  $\boxempty$~~~~~~~Hybride  $\boxempty$
+
+\input{newsubsections.inc.tex}
+
+\subsubsection{} \begin{instructions}
+Décrivez:
+\begin{enumerate}[label=\roman*.]
+\item les activités que la ou les personnes stagiaires effectueront avec l'organisation partenaire;
+\item les personnes avec lesquelles la ou les personnes stagiaires interagiront directement et la façon dont le personnel de l'organisation partenaire soutiendra le projet;
+\item les ressources (p. ex, les outils, les données, les installations, etc.) qui seront mises à la disposition de la ou des personnes stagiaires; 
+\item les renseignements sur les installations physiques (emplacement) et/ou la ou les plateforme·s virtuelle·s de l'organisation partenaire où le travail sera effectué.
+\end{enumerate}
+\end{instructions}
+
+\subsubsection{} \begin{instructions}
+Le cas échéant, pour les candidates et les candidats au programme Accélération Entrepreneur, veuillez 1)~décrire les activités qui seront réalisées avec l'incubateur préapprouvé, y compris l'interaction prévue avec le personnel de l'incubateur; et 2)~indiquer les ressources que l'incubateur préapprouvé fournira, notamment des renseignements sur les ressources, l'expertise et les locaux.
+\end{instructions}
+
+\subsubsection{}\begin{instructions}
+Décrivez la nature de la supervision académique pendant la période de stage. Précisez le type et la fréquence des interactions (p.\ ex., réunions, appels téléphoniques, etc.) entre la ou le stagiaire et les personnes responsables de la supervision à l'établissement d'enseignement.
+\end{instructions}
+
+\subsubsection{}\begin{instructions}
+Décrivez comment le projet s'inscrit dans le cadre des études postsecondaires de la ou des personnes stagiaires et soutient le développement de sa ou leur future·s carrière·s. Par exemple, élargir leur réseau professionnel, acquérir des connaissances dans un contexte commercial ou de recherche appliquée ou développer leurs compétences en matière de résolution de problèmes, de gestion de projets, de pensée créatrice, de communications, etc.
+\end{instructions}
+
+%% }}}
+
+\subsection{Avantage pour l'organisation partenaire et le Canada} %% {{{
+
+\begin{instructions}
+Expliquez à quels besoins de l'organisation partenaire le projet répond et les avantages qu'il procure au Canada. Veuillez sélectionner toutes les réponses qui s'appliquent. Vous devez sélectionner au moins une réponse.
+\end{instructions}
+
+\begin{itemize}[label=$\boxempty$]
+\item Recherche et développement (R\&D) pour améliorer un produit ou un processus ou pour commercialiser une innovation 
+\item Meilleure productivité à l'organisation partenaire 
+\item Contribution au développement de talents qualifiés du Canada
+\item Utilisation des résultats du projet pour résoudre un problème sociétal  
+\item Encouragement de nouvelles collaborations (p. ex, avec l'établissement d'enseignement, avec les personnes responsables de la supervision)  
+\item Autre (si autre, veuillez préciser) :
+\end{itemize}
+
+\begin{instructions}
+Selon l'option ou les options sélectionnée·s ci-dessus, veuillez décrire comment le·s bénéfice·s est/sont censé·s être réalisé·s dans le cadre de ce projet.
+\end{instructions}
+
+%% }}}
+
+\subsection{Participation de la communauté autochtone ou impact sur celle-ci (le cas échéant)} %% {{{
+
+\begin{instructions}
+Les projets qui impliquent les communautés autochtones ou ont un impact sur celles-ci doivent se conformer à la Politique sur la recherche autochtone. 
+Veuillez fournir des renseignements sur :
+
+\begin{enumerate}[label=\alph*)]
+\item le soutien de la communauté autochtone pour le projet et son rôle dans l'établissement des objectifs et de l'approche;
+\item les plans concernant l'accès des communautés autochtones aux connaissances et aux données générées par le projet, ainsi que leur utilisation et leur gouvernance;
+\item l'expérience de l'équipe en recherche autochtone, y compris toute formation ou tout mentorat prévus pour la ou les personnes stagiaires pour remédier au manque d'expérience.
+\end{enumerate}
+
+Vous pouvez aussi soumettre une ou deux lettres de soutien d'un·e ou de deux Aîné·es autochtones, Gardien·nes du savoir ou des chercheur·es autochtones qui sont membres de la ou des communautés partenaires où les travaux se dérouleront et qui ont le pouvoir de parler des intérêts de la communauté.
+\end{instructions}
+
+%% }}}
+
+\subsection{Relations avec des projets Mitacs antérieurs ou en cours} %% {{{
+
+\subsubsection{} Les personnes participantes (le ou la professeur·e superviseur·e ou l'organisation partenaire) ont-elles des projets Mitacs en cours ou à venir (soumis récemment, en même temps que cette demande ou prévue dans un avenir proche)?
+
+$\boxempty$ Oui~~~~~~~$\boxempty$ Non
+
+\begin{instructions}
+Dans l'affirmative, veuillez expliquer si la demande actuelle est liée à d'autres demandes et fournir des détails sur ce lien (p. ex, s'il n'y a aucun lien entre les demandes en raison de domaines de recherche différents, indiquez-le. Si elles sont liées, précisez comment elles se complètent, quelle sera la répartition des tâches, comment la communication et la supervision seront organisées, et quelles ressources seront partagées, etc.). Veuillez aussi fournir les numéros IT de projet, le cas échéant.
+\end{instructions}
+
+
+\subsubsection{} Votre équipe de projet a-t-elle déjà soumis une demande à Mitacs dans le passé?
+
+$\boxempty$ Oui~~~~~~~$\boxempty$ Non
+
+\begin{instructions}
+Dans l'affirmative, veuillez indiquer si le projet actuel est lié à d'autres projets antérieurs et fournir des précisions sur ces liens, y compris les numéros IT du ou des projets concernés. Par exemple, s'il n'y a aucun lien entre les projets en raison de domaines de recherche différents, indiquez-le. S'ils sont liés, décrivez les réalisations des projets antérieurs et la manière dont la demande actuelle s'appuie sur les résultats précédents.
+\end{instructions}
+
+%% }}}
+
+\subsection{Références} %% {{{
+
+\bibliographystyle{plain}
+\bibliography{demande}
+
+%% }}}
+
+\end{document}
+%% :folding=explicit:wrap=soft:

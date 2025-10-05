@@ -1,0 +1,22 @@
+% Define layout: like a \item with hanging indent
+\titleformat{\subsubsection}[runin]
+  {\normalfont\bfseries}  % style of label + text
+  {\thesubsubsection}     % what to print before the title
+  {1em}                   % spacing between label and title text
+  {}                      % code before the title body
+  []                      % code after the title
+
+% Hanging indent so the whole paragraph aligns under the title text
+\titlespacing*{\subsubsection}
+  {0pt}           % left margin
+  {1ex plus .2ex} % vertical space before
+  {9pt}    % horizontal space after (unused for runin)
+
+% Add hanging indent after each subsubsection
+\makeatletter
+\let\old@subsubsection\subsubsection
+\renewcommand{\subsubsection}[1]{%
+  \old@subsubsection{#1}%
+  \hangindent=0.25in
+}
+\makeatother
