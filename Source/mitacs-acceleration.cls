@@ -25,7 +25,7 @@
 %% Déclarations
 %% ------------------------
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{mitacs-acceleration}[2025/10/05, Mitacs Acceleration V1.0 par Sylvain Hallé]
+\ProvidesClass{mitacs-acceleration}[2025/10/06, Mitacs Acceleration V1.0.1 par Sylvain Hallé]
 
 %% ------------------------
 %% Vérifie qu'on compile avec lualatex
@@ -93,14 +93,15 @@
 \makeatletter
 \renewcommand{\maketitle}{%
 \begin{center}
-  \chivo\LARGE\bfseries\color{white}\@title
+  \questasansbold\LARGE\color{white}\@title
 \end{center}
 }
 \makeatother
 % Set Helvetica (or TeX Gyre Heros) as the default sans font
 \setsansfont{TeX Gyre Heros} % a free Helvetica-like font
-% Chivo font for a special heading
-\newfontfamily\chivo{Chivo}
+
+\newfontfamily{\questasansbold}{Questa_Sans_Bold}
+[Path=./fonts/, Extension = .otf, UprightFont = *]
 
 %% Environnements custom
 \newenvironment{instructions}{\itshape\small\color{gray}}{}
@@ -112,8 +113,17 @@
 \renewcommand{\thesubsection}{\arabic{section}.\Alph{subsection}.}
 \renewcommand{\thesubsubsection}{\alph{subsubsection})}
 
+\fancypagestyle{plain}
+{
+  \fancyhead[L,C,R]{}
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyfoot[C]{}
+  \fancyfoot[R]{\footnotesize\textbf{Version la plus récente Mars 2025~~~~~~\thepage} de \textbf{\pageref{LastPage}}}
+}
+
 \pagestyle{fancy}
-\fancyhead[L,C,R]{}
+\fancyhead[C,R]{}
+\fancyhead[L]{\includegraphics[height=0.35in]{mitacsbleu}}
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot[C]{}
 \fancyfoot[R]{\footnotesize\textbf{Version la plus récente Mars 2025~~~~~~\thepage} de \textbf{\pageref{LastPage}}}
@@ -122,7 +132,7 @@
 \SetBgScale{1}
 \SetBgOpacity{1}
 \SetBgAngle{0}
-\SetBgContents{\includegraphics[width=8.5in]{Entete.png}}
+\SetBgContents{\includegraphics[width=8.5in]{entete}}
 \BgThispage
 }
 
